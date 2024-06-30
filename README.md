@@ -13,6 +13,7 @@ pip install -r requirements.txt
 ```bash
 python team_divide.py
 ```
+最終的な結果はprintされるのと、エクセル出力されるようになっています。
 
 ### 注意事項
 ChatGPTを活用してコード作成しています。問題があればissueに記載ください。
