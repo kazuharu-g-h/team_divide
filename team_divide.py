@@ -87,6 +87,7 @@ def evaluate_teams(teams):
     year_balance = np.std(years_sum)
 
     return sum(gender_balance) + level_balance + sum(first_years_balance) + year_balance
+    # 男女比(差し引き)、レベルバランス(分散)、1年目の人数(合計)、年次のバランス(分散)を評価対象に
 
 # 制約を満たすか確認
 def check_constraints(teams, must_pair, must_separate):
@@ -164,5 +165,5 @@ for df in dataframes:
     for r_idx, row in enumerate(dataframe_to_rows(df, index=False, header=True), 1):
         for c_idx, value in enumerate(row, start_col):
             ws.cell(row=r_idx, column=c_idx, value=value)
-    start_col += len(df.columns) + 1  # データフレームの列数+空白列2列分を追加
+    start_col += len(df.columns) + 1  # データフレームの列数+空白列1列分を追加
 wb.save("teams_output.xlsx")
